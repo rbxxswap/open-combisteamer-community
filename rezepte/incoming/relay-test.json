@@ -1,0 +1,21 @@
+{
+  "schema": "garprogramm/v1",
+  "id": "relay-test",
+  "name": "Relay-Test",
+  "kategorie": "Fleisch",
+  "phasen": [
+    {
+      "name": "Test",
+      "betriebsart": "kombi",
+      "temperatur_c": 160,
+      "feuchte_pct": 50,
+      "luefter": 2,
+      "reversieren": false,
+      "ende": {
+        "typ": "zeit",
+        "zeit_s": 600
+      },
+      "optionen": {}
+    }
+  ]
+}

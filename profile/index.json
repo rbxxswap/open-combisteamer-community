@@ -1,0 +1,32 @@
+[
+  {
+    "schema": "hwprofil/v1",
+    "id": "prof-ggm-1ph",
+    "name": "GGM Tischger\u00e4t 230V (Beispiel)",
+    "phasen": 1,
+    "spannung_v": 230,
+    "heizleistung_w": 3400,
+    "heizung_schaltung": 0,
+    "luefter_anzahl": 1,
+    "luefter_regelung": 0,
+    "luefter_stufen": 1,
+    "luefter_reversierbar": false,
+    "wasser_variante": "A",
+    "klappe": false,
+    "luefter_bei_tuer_offen": true,
+    "kamera": false,
+    "tuer_schaltet_heizung": false,
+    "verdampf_mg_s": 0,
+    "entf_klappe_pct_min": 8,
+    "entf_tuer_pct_min": 4,
+    "entf_passiv_pct_min": 2,
+    "vorheiz_ueberhoehung_c": 15,
+    "tuer_offen_heiz_c": 0,
+    "warmhalten_c": 60,
+    "warmhalten_max_min": 120,
+    "reversier_interval_s": 120,
+    "max_temp_c": 300,
+    "kernfuehler": true,
+    "feuchte_korrektur_pct": 0
+  }
+]

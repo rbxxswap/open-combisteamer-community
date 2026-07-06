@@ -1,0 +1,166 @@
+[
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-krustenbraten",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Krustenbraten",
+    "kategorie": "Fleisch",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": true,
+      "temperatur_c": 63
+    },
+    "phasen": [
+      {
+        "name": "Anbraten",
+        "betriebsart": "heissluft",
+        "temperatur_c": 230,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 900
+        },
+        "optionen": {}
+      },
+      {
+        "name": "Niedergaren",
+        "betriebsart": "kombi",
+        "temperatur_c": 130,
+        "feuchte_pct": 60,
+        "luefter": 2,
+        "reversieren": false,
+        "ende": {
+          "typ": "kerntemperatur",
+          "kern_c": 68
+        },
+        "optionen": {
+          "zeit_ab_sollwert": true
+        }
+      },
+      {
+        "name": "Kruste",
+        "betriebsart": "heissluft",
+        "temperatur_c": 230,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 600
+        },
+        "optionen": {
+          "entdampfen_modus": "erzwingen",
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-haehnchen",
+    "version": 1,
+    "autor": "anonym",
+    "name": "H\u00e4hnchenschenkel",
+    "kategorie": "Gefl\u00fcgel",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 63
+    },
+    "phasen": [
+      {
+        "name": "Garen",
+        "betriebsart": "kombi",
+        "temperatur_c": 180,
+        "feuchte_pct": 40,
+        "luefter": 3,
+        "reversieren": false,
+        "ende": {
+          "typ": "kerntemperatur",
+          "kern_c": 82
+        },
+        "optionen": {
+          "zeit_ab_sollwert": true
+        }
+      },
+      {
+        "name": "Knusprig",
+        "betriebsart": "heissluft",
+        "temperatur_c": 220,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 480
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-gemuese",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Gem\u00fcse d\u00e4mpfen",
+    "kategorie": "Beilagen",
+    "vorheizen": false,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 60
+    },
+    "phasen": [
+      {
+        "name": "D\u00e4mpfen",
+        "betriebsart": "daempfen",
+        "temperatur_c": 100,
+        "feuchte_pct": 100,
+        "luefter": 2,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 480
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-broetchen",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Br\u00f6tchen aufbacken",
+    "kategorie": "Backen",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 60
+    },
+    "phasen": [
+      {
+        "name": "Backen",
+        "betriebsart": "kombi",
+        "temperatur_c": 200,
+        "feuchte_pct": 20,
+        "luefter": 3,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 360
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  }
+]

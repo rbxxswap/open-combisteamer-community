@@ -63,8 +63,8 @@
     "id": "lib-haehnchen",
     "version": 1,
     "autor": "anonym",
-    "name": "H\u00e4hnchenschenkel",
-    "kategorie": "Gefl\u00fcgel",
+    "name": "Haehnchenschenkel",
+    "kategorie": "Gefluegel",
     "vorheizen": true,
     "warmhalten": {
       "aktiv": false,
@@ -108,7 +108,7 @@
     "id": "lib-gemuese",
     "version": 1,
     "autor": "anonym",
-    "name": "Gem\u00fcse d\u00e4mpfen",
+    "name": "Gemuese daempfen",
     "kategorie": "Beilagen",
     "vorheizen": false,
     "warmhalten": {
@@ -117,7 +117,7 @@
     },
     "phasen": [
       {
-        "name": "D\u00e4mpfen",
+        "name": "Daempfen",
         "betriebsart": "daempfen",
         "temperatur_c": 100,
         "feuchte_pct": 100,
@@ -138,7 +138,7 @@
     "id": "lib-broetchen",
     "version": 1,
     "autor": "anonym",
-    "name": "Br\u00f6tchen aufbacken",
+    "name": "Broetchen aufbacken",
     "kategorie": "Backen",
     "vorheizen": true,
     "warmhalten": {
@@ -158,6 +158,217 @@
           "zeit_s": 360
         },
         "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-lachs",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Lachsfilet",
+    "kategorie": "Fisch",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 55
+    },
+    "phasen": [
+      {
+        "name": "Sanft garen",
+        "betriebsart": "daempfen",
+        "temperatur_c": 80,
+        "feuchte_pct": 90,
+        "luefter": 1,
+        "reversieren": false,
+        "ende": {
+          "typ": "kerntemperatur",
+          "kern_c": 52
+        },
+        "optionen": {
+          "zeit_ab_sollwert": true,
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-ruehrei",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Ruehrei",
+    "kategorie": "Eierspeisen",
+    "vorheizen": false,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 60
+    },
+    "phasen": [
+      {
+        "name": "Stocken",
+        "betriebsart": "kombi",
+        "temperatur_c": 90,
+        "feuchte_pct": 50,
+        "luefter": 1,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 360
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-rinderbraten",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Rinderbraten (NT)",
+    "kategorie": "Fleisch",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": true,
+      "temperatur_c": 58
+    },
+    "phasen": [
+      {
+        "name": "Anbraten",
+        "betriebsart": "heissluft",
+        "temperatur_c": 240,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 600
+        },
+        "optionen": {}
+      },
+      {
+        "name": "Niedertemperatur",
+        "betriebsart": "kombi",
+        "temperatur_c": 120,
+        "feuchte_pct": 40,
+        "luefter": 1,
+        "reversieren": false,
+        "ende": {
+          "typ": "kerntemperatur",
+          "kern_c": 56
+        },
+        "optionen": {
+          "zeit_ab_sollwert": true,
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-pizza",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Pizza aufbacken",
+    "kategorie": "Backen",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": false,
+      "temperatur_c": 60
+    },
+    "phasen": [
+      {
+        "name": "Backen",
+        "betriebsart": "heissluft",
+        "temperatur_c": 250,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 420
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-kartoffeln",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Kartoffeln daempfen",
+    "kategorie": "Beilagen",
+    "vorheizen": false,
+    "warmhalten": {
+      "aktiv": true,
+      "temperatur_c": 65
+    },
+    "phasen": [
+      {
+        "name": "Daempfen",
+        "betriebsart": "daempfen",
+        "temperatur_c": 100,
+        "feuchte_pct": 100,
+        "luefter": 2,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 1500
+        },
+        "optionen": {
+          "signalton": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "garprogramm/v1",
+    "id": "lib-ente",
+    "version": 1,
+    "autor": "anonym",
+    "name": "Entenkeule",
+    "kategorie": "Gefluegel",
+    "vorheizen": true,
+    "warmhalten": {
+      "aktiv": true,
+      "temperatur_c": 62
+    },
+    "phasen": [
+      {
+        "name": "Schmoren",
+        "betriebsart": "kombi",
+        "temperatur_c": 150,
+        "feuchte_pct": 50,
+        "luefter": 2,
+        "reversieren": false,
+        "ende": {
+          "typ": "kerntemperatur",
+          "kern_c": 85
+        },
+        "optionen": {
+          "zeit_ab_sollwert": true
+        }
+      },
+      {
+        "name": "Kross",
+        "betriebsart": "heissluft",
+        "temperatur_c": 220,
+        "feuchte_pct": 0,
+        "luefter": 4,
+        "reversieren": false,
+        "ende": {
+          "typ": "zeit",
+          "zeit_s": 720
+        },
+        "optionen": {
+          "entdampfen_modus": "erzwingen",
           "signalton": true
         }
       }

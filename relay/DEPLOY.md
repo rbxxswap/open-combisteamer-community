@@ -1,5 +1,7 @@
 # Community-Relay einrichten (Deno Deploy)
 
+> Hinweis: Das hier richtet der **Betreiber der Community EINMAL** ein (ein Relay fuer alle). **Endnutzer muessen nichts tun** – ihr Geraet/Web nutzt die fest eingebaute Relay-Adresse. Es liegt kein Geheimnis im Repo; das Token lebt nur als Umgebungsvariable im Dienst.
+
 Der Relay nimmt Beitraege (Rezepte/Profile) an und legt daraus einen Pull Request an.
 Er haelt EIN GitHub-Token serverseitig – nie am Geraet.
 

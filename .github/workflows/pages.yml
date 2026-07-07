@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Stage flasher + latest firmware
+      - name: Stage flasher + firmware (merged + app)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -30,8 +30,7 @@ jobs:
           cp -r docs/. _site/
           TAG=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 1 --json tagName -q '.[0].tagName')
           echo "Neueste Version: $TAG"
-          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
-            --pattern 'firmware-merged-esp32p4.bin' --dir _site --clobber
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.bin' --dir _site --clobber
           cat > _site/manifest.json <<JSON
           { "name": "Open Combi-Steamer", "version": "$TAG",
             "new_install_prompt_erase": true,

@@ -1,377 +1,387 @@
 [
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-krustenbraten",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Krustenbraten",
-    "kategorie": "Fleisch",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": true,
-      "temperatur_c": 63
-    },
-    "phasen": [
-      {
-        "name": "Anbraten",
-        "betriebsart": "heissluft",
-        "temperatur_c": 230,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 900
-        },
-        "optionen": {}
-      },
-      {
-        "name": "Niedergaren",
-        "betriebsart": "kombi",
-        "temperatur_c": 130,
-        "feuchte_pct": 60,
-        "luefter": 2,
-        "reversieren": false,
-        "ende": {
-          "typ": "kerntemperatur",
-          "kern_c": 68
-        },
-        "optionen": {
-          "zeit_ab_sollwert": true
-        }
-      },
-      {
-        "name": "Kruste",
-        "betriebsart": "heissluft",
-        "temperatur_c": 230,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 600
-        },
-        "optionen": {
-          "entdampfen_modus": "erzwingen",
-          "signalton": true
-        }
-      }
-    ]
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-krustenbraten",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Krustenbraten",
+  "kategorie": "Fleisch",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": true,
+   "temperatur_c": 63
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-haehnchen",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Haehnchenschenkel",
-    "kategorie": "Gefluegel",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 63
+  "phasen": [
+   {
+    "name": "Anbraten",
+    "betriebsart": "heissluft",
+    "temperatur_c": 230,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 900
     },
-    "phasen": [
-      {
-        "name": "Garen",
-        "betriebsart": "kombi",
-        "temperatur_c": 180,
-        "feuchte_pct": 40,
-        "luefter": 3,
-        "reversieren": false,
-        "ende": {
-          "typ": "kerntemperatur",
-          "kern_c": 82
-        },
-        "optionen": {
-          "zeit_ab_sollwert": true
-        }
-      },
-      {
-        "name": "Knusprig",
-        "betriebsart": "heissluft",
-        "temperatur_c": 220,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 480
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {}
+   },
+   {
+    "name": "Niedergaren",
+    "betriebsart": "kombi",
+    "temperatur_c": 130,
+    "feuchte_pct": 60,
+    "luefter": 2,
+    "reversieren": false,
+    "ende": {
+     "typ": "kerntemperatur",
+     "kern_c": 68
+    },
+    "optionen": {
+     "zeit_ab_sollwert": true
+    }
+   },
+   {
+    "name": "Kruste",
+    "betriebsart": "heissluft",
+    "temperatur_c": 230,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 600
+    },
+    "optionen": {
+     "entdampfen_modus": "erzwingen",
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Schweinebraten mit knuspriger Kruste. Erst scharf anbraten, dann schonend bei Kombi-Dampf auf 68 Grad Kerntemperatur garen, zum Schluss die Schwarte bei 230 Grad aufknuspern. Tipp: Schwarte vorher rautenfoermig einschneiden."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-haehnchen",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Haehnchenschenkel",
+  "kategorie": "Gefluegel",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 63
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-gemuese",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Gemuese daempfen",
-    "kategorie": "Beilagen",
-    "vorheizen": false,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 60
+  "phasen": [
+   {
+    "name": "Garen",
+    "betriebsart": "kombi",
+    "temperatur_c": 180,
+    "feuchte_pct": 40,
+    "luefter": 3,
+    "reversieren": false,
+    "ende": {
+     "typ": "kerntemperatur",
+     "kern_c": 82
     },
-    "phasen": [
-      {
-        "name": "Daempfen",
-        "betriebsart": "daempfen",
-        "temperatur_c": 100,
-        "feuchte_pct": 100,
-        "luefter": 2,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 480
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "zeit_ab_sollwert": true
+    }
+   },
+   {
+    "name": "Knusprig",
+    "betriebsart": "heissluft",
+    "temperatur_c": 220,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 480
+    },
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Saftige Haehnchenschenkel mit knuspriger Haut. Heissluft sorgt fuer gleichmaessige, goldbraune Braeune rundum. Tipp: vorher mit Oel und Paprika einreiben."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-gemuese",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Gemuese daempfen",
+  "kategorie": "Beilagen",
+  "vorheizen": false,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 60
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-broetchen",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Broetchen aufbacken",
-    "kategorie": "Backen",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 60
+  "phasen": [
+   {
+    "name": "Daempfen",
+    "betriebsart": "daempfen",
+    "temperatur_c": 100,
+    "feuchte_pct": 100,
+    "luefter": 2,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 480
     },
-    "phasen": [
-      {
-        "name": "Backen",
-        "betriebsart": "kombi",
-        "temperatur_c": 200,
-        "feuchte_pct": 20,
-        "luefter": 3,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 360
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Schonendes Daempfen von frischem Gemuese bei 100 Grad. Erhaelt Farbe, Biss und Vitamine, ideal fuer Brokkoli, Karotten oder Bohnen. Tipp: gleich grosse Stuecke schneiden."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-broetchen",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Broetchen aufbacken",
+  "kategorie": "Backen",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 60
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-lachs",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Lachsfilet",
-    "kategorie": "Fisch",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 55
+  "phasen": [
+   {
+    "name": "Backen",
+    "betriebsart": "kombi",
+    "temperatur_c": 200,
+    "feuchte_pct": 20,
+    "luefter": 3,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 360
     },
-    "phasen": [
-      {
-        "name": "Sanft garen",
-        "betriebsart": "daempfen",
-        "temperatur_c": 80,
-        "feuchte_pct": 90,
-        "luefter": 1,
-        "reversieren": false,
-        "ende": {
-          "typ": "kerntemperatur",
-          "kern_c": 52
-        },
-        "optionen": {
-          "zeit_ab_sollwert": true,
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Aufbackbroetchen in wenigen Minuten knusprig. Ein kurzer Dampfstoss am Anfang macht die Kruste roesch. Tipp: Broetchen vorher kurz mit Wasser bespruehen."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-lachs",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Lachsfilet",
+  "kategorie": "Fisch",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 55
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-ruehrei",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Ruehrei",
-    "kategorie": "Eierspeisen",
-    "vorheizen": false,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 60
+  "phasen": [
+   {
+    "name": "Sanft garen",
+    "betriebsart": "daempfen",
+    "temperatur_c": 80,
+    "feuchte_pct": 90,
+    "luefter": 1,
+    "reversieren": false,
+    "ende": {
+     "typ": "kerntemperatur",
+     "kern_c": 52
     },
-    "phasen": [
-      {
-        "name": "Stocken",
-        "betriebsart": "kombi",
-        "temperatur_c": 90,
-        "feuchte_pct": 50,
-        "luefter": 1,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 360
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "zeit_ab_sollwert": true,
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Zart gegartes Lachsfilet bei niedriger Temperatur mit viel Dampf. Bei 52 Grad Kerntemperatur bleibt der Fisch glasig und saftig. Tipp: vorher leicht salzen und mit Zitrone wuerzen."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-ruehrei",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Ruehrei",
+  "kategorie": "Eierspeisen",
+  "vorheizen": false,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 60
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-rinderbraten",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Rinderbraten (NT)",
-    "kategorie": "Fleisch",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": true,
-      "temperatur_c": 58
+  "phasen": [
+   {
+    "name": "Stocken",
+    "betriebsart": "kombi",
+    "temperatur_c": 90,
+    "feuchte_pct": 50,
+    "luefter": 1,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 360
     },
-    "phasen": [
-      {
-        "name": "Anbraten",
-        "betriebsart": "heissluft",
-        "temperatur_c": 240,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 600
-        },
-        "optionen": {}
-      },
-      {
-        "name": "Niedertemperatur",
-        "betriebsart": "kombi",
-        "temperatur_c": 120,
-        "feuchte_pct": 40,
-        "luefter": 1,
-        "reversieren": false,
-        "ende": {
-          "typ": "kerntemperatur",
-          "kern_c": 56
-        },
-        "optionen": {
-          "zeit_ab_sollwert": true,
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Cremiges Ruehrei aus dem Kombidaempfer, ohne Anbrennen und staendiges Ruehren. Bei 90 Grad mit Dampf stockt die Eimasse gleichmaessig. Tipp: einmal umruehren, wenn sie halb fest ist."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-rinderbraten",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Rinderbraten (NT)",
+  "kategorie": "Fleisch",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": true,
+   "temperatur_c": 58
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-pizza",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Pizza aufbacken",
-    "kategorie": "Backen",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": false,
-      "temperatur_c": 60
+  "phasen": [
+   {
+    "name": "Anbraten",
+    "betriebsart": "heissluft",
+    "temperatur_c": 240,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 600
     },
-    "phasen": [
-      {
-        "name": "Backen",
-        "betriebsart": "heissluft",
-        "temperatur_c": 250,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 420
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {}
+   },
+   {
+    "name": "Niedertemperatur",
+    "betriebsart": "kombi",
+    "temperatur_c": 120,
+    "feuchte_pct": 40,
+    "luefter": 1,
+    "reversieren": false,
+    "ende": {
+     "typ": "kerntemperatur",
+     "kern_c": 56
+    },
+    "optionen": {
+     "zeit_ab_sollwert": true,
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Niedertemperatur-Rinderbraten, rosa und butterzart. Kurz scharf angebraten, dann langsam auf 56 Grad Kerntemperatur gezogen. Tipp: nach dem Garen 10 Minuten ruhen lassen."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-pizza",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Pizza aufbacken",
+  "kategorie": "Backen",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": false,
+   "temperatur_c": 60
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-kartoffeln",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Kartoffeln daempfen",
-    "kategorie": "Beilagen",
-    "vorheizen": false,
-    "warmhalten": {
-      "aktiv": true,
-      "temperatur_c": 65
+  "phasen": [
+   {
+    "name": "Backen",
+    "betriebsart": "heissluft",
+    "temperatur_c": 250,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 420
     },
-    "phasen": [
-      {
-        "name": "Daempfen",
-        "betriebsart": "daempfen",
-        "temperatur_c": 100,
-        "feuchte_pct": 100,
-        "luefter": 2,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 1500
-        },
-        "optionen": {
-          "signalton": true
-        }
-      }
-    ]
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Pizza knusprig aufbacken bei 250 Grad Heissluft. Der Boden wird kross, der Kaese gleichmaessig ueberbacken. Tipp: direkt auf den vorgeheizten Rost oder Pizzastein."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-kartoffeln",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Kartoffeln daempfen",
+  "kategorie": "Beilagen",
+  "vorheizen": false,
+  "warmhalten": {
+   "aktiv": true,
+   "temperatur_c": 65
   },
-  {
-    "schema": "garprogramm/v1",
-    "id": "lib-ente",
-    "version": 1,
-    "autor": "anonym",
-    "name": "Entenkeule",
-    "kategorie": "Gefluegel",
-    "vorheizen": true,
-    "warmhalten": {
-      "aktiv": true,
-      "temperatur_c": 62
+  "phasen": [
+   {
+    "name": "Daempfen",
+    "betriebsart": "daempfen",
+    "temperatur_c": 100,
+    "feuchte_pct": 100,
+    "luefter": 2,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 1500
     },
-    "phasen": [
-      {
-        "name": "Schmoren",
-        "betriebsart": "kombi",
-        "temperatur_c": 150,
-        "feuchte_pct": 50,
-        "luefter": 2,
-        "reversieren": false,
-        "ende": {
-          "typ": "kerntemperatur",
-          "kern_c": 85
-        },
-        "optionen": {
-          "zeit_ab_sollwert": true
-        }
-      },
-      {
-        "name": "Kross",
-        "betriebsart": "heissluft",
-        "temperatur_c": 220,
-        "feuchte_pct": 0,
-        "luefter": 4,
-        "reversieren": false,
-        "ende": {
-          "typ": "zeit",
-          "zeit_s": 720
-        },
-        "optionen": {
-          "entdampfen_modus": "erzwingen",
-          "signalton": true
-        }
-      }
-    ]
-  }
+    "optionen": {
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Festkochende Kartoffeln schonend bei 100 Grad daempfen. Sie bleiben locker und zerfallen nicht, ideal als Beilage oder fuer Salat. Tipp: gleich grosse Knollen waehlen."
+ },
+ {
+  "schema": "garprogramm/v1",
+  "id": "lib-ente",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Entenkeule",
+  "kategorie": "Gefluegel",
+  "vorheizen": true,
+  "warmhalten": {
+   "aktiv": true,
+   "temperatur_c": 62
+  },
+  "phasen": [
+   {
+    "name": "Schmoren",
+    "betriebsart": "kombi",
+    "temperatur_c": 150,
+    "feuchte_pct": 50,
+    "luefter": 2,
+    "reversieren": false,
+    "ende": {
+     "typ": "kerntemperatur",
+     "kern_c": 85
+    },
+    "optionen": {
+     "zeit_ab_sollwert": true
+    }
+   },
+   {
+    "name": "Kross",
+    "betriebsart": "heissluft",
+    "temperatur_c": 220,
+    "feuchte_pct": 0,
+    "luefter": 4,
+    "reversieren": false,
+    "ende": {
+     "typ": "zeit",
+     "zeit_s": 720
+    },
+    "optionen": {
+     "entdampfen_modus": "erzwingen",
+     "signalton": true
+    }
+   }
+  ],
+  "beschreibung": "Knusprige Entenkeule mit zartem Fleisch. Kombi-Garen haelt das Fleisch saftig, Heissluft macht die Haut knusprig. Tipp: Haut einstechen, damit Fett austreten kann."
+ }
 ]

@@ -45,7 +45,7 @@ function validate(type, d){
   }
   return "unbekannter Typ";
 }
-async function makePR(token, type, data){
+async function makePR(token, type, data, image){
   const id  = clean(data.id) || crypto.randomUUID();
   const dir = type==="profil" ? "profile/incoming" : "rezepte/incoming";
   const path= `${dir}/${id}.json`;
@@ -58,6 +58,10 @@ async function makePR(token, type, data){
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
   const fRes = await gh(token, `/repos/${REPO}/contents/${encodeURIComponent(path)}`, { method:"PUT", body: JSON.stringify({ message:`Beitrag: ${type} ${data.name||id}`, content, branch }) });
   if(!fRes.ok) throw new Error("file: "+fRes.status);
+  if(image && type!=="profil"){
+    const imgPath = `rezepte/images/${id}.jpg`;
+    await gh(token, `/repos/${REPO}/contents/${encodeURIComponent(imgPath)}`, { method:"PUT", body: JSON.stringify({ message:`Bild: ${id}`, content: image, branch }) });
+  }
   const prRes = await gh(token, `/repos/${REPO}/pulls`, { method:"POST", body: JSON.stringify({ title:`Beitrag: ${type} - ${data.name||id}`, head: branch, base: BASE, body:"Automatischer Community-Beitrag ueber den Relay. Bitte pruefen." }) });
   if(!prRes.ok) throw new Error("pr: "+prRes.status);
   return (await prRes.json()).html_url;
@@ -117,7 +121,7 @@ export default {
     const type = String(body.type||"rezept");
     const err = validate(type, body.data);
     if(err) return J({ ok:false, error: err }, 400);
-    try { const pr = await makePR(env.GH_TOKEN, type, body.data); return J({ ok:true, pr }); }
+    try { const pr = await makePR(env.GH_TOKEN, type, body.data, body.image); return J({ ok:true, pr }); }
     catch(e){ return J({ ok:false, error: String(e) }, 500); }
   }
 };

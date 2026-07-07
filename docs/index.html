@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Combi-Steamer - Firmware flashen</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
+<style>
+ body{font-family:system-ui,-apple-system,sans-serif;background:#0d1117;color:#e6edf3;max-width:640px;margin:48px auto;padding:0 16px;line-height:1.5}
+ h1{color:#ef9f27;margin-bottom:4px}
+ .card{background:#161b22;border:1px solid #30363d;border-radius:14px;padding:22px;margin-top:18px}
+ .h{color:#8b949e;font-size:14px}
+ button.flash{background:#ef9f27;color:#0d1117;border:0;border-radius:10px;padding:14px 22px;font-size:17px;font-weight:600;cursor:pointer}
+</style>
+</head>
+<body>
+<h1>Open Combi-Steamer</h1>
+<div class="h">Erstflash der Firmware direkt aus dem Browser.</div>
+<div class="card">
+ <p>Gerät per <b>USB-C</b> anschließen und flashen. Funktioniert nur mit <b>Chrome</b> oder <b>Edge</b> (WebSerial).</p>
+ <esp-web-install-button manifest="./manifest.json">
+   <button class="flash" slot="activate">Firmware flashen</button>
+   <span slot="unsupported" class="h">Dieser Browser unterstützt kein WebSerial - bitte Chrome oder Edge verwenden.</span>
+   <span slot="not-allowed" class="h">Nur über HTTPS möglich.</span>
+ </esp-web-install-button>
+ <p class="h" style="margin-top:16px">Nach dem Erstflash laufen alle weiteren Updates drahtlos über die Weboberfläche des Geräts (OTA) - kein Kabel mehr nötig.</p>
+ <p class="h">Aktuelle Version: siehe <a href="./version.txt" style="color:#378add">version.txt</a></p>
+</div>
+</body>
+</html>

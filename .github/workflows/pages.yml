@@ -1,0 +1,43 @@
+name: pages
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage flasher + latest firmware
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -r docs/. _site/
+          TAG=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 1 --json tagName -q '.[0].tagName')
+          echo "Neueste Version: $TAG"
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'firmware-merged-esp32p4.bin' --dir _site --clobber
+          cat > _site/manifest.json <<JSON
+          { "name": "Open Combi-Steamer", "version": "$TAG",
+            "new_install_prompt_erase": true,
+            "builds": [ { "chipFamily": "ESP32-P4",
+              "parts": [ { "path": "./firmware-merged-esp32p4.bin", "offset": 0 } ] } ] }
+          JSON
+          echo "$TAG" > _site/version.txt
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

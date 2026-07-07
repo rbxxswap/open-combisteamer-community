@@ -31,8 +31,8 @@ function validate(type, d){
     if(d.schema!=="garprogramm/v1") return "falsches Schema";
     if(!Array.isArray(d.phasen)||d.phasen.length<1) return "keine Phasen";
     for(const p of d.phasen){
-      if(!num(p.temperatur_c)||p.temperatur_c<0||p.temperatur_c>300) return "Temperatur ausserhalb 0..300";
-      if(!num(p.feuchte_pct)||p.feuchte_pct<0||p.feuchte_pct>100) return "Feuchte ausserhalb 0..100";
+      if(!num(p.temperatur_c)||p.temperatur_c<0||p.temperatur_c>300) return "Temperatur außerhalb 0..300";
+      if(!num(p.feuchte_pct)||p.feuchte_pct<0||p.feuchte_pct>100) return "Feuchte außerhalb 0..100";
       if(!["daempfen","dampf","heissluft","kombi"].includes(String(p.betriebsart))) return "unbekannte Betriebsart";
     }
     return null;
@@ -62,7 +62,7 @@ async function makePR(token, type, data, image){
     const imgPath = `rezepte/images/${id}.jpg`;
     await gh(token, `/repos/${REPO}/contents/${encodeURIComponent(imgPath)}`, { method:"PUT", body: JSON.stringify({ message:`Bild: ${id}`, content: image, branch }) });
   }
-  const prRes = await gh(token, `/repos/${REPO}/pulls`, { method:"POST", body: JSON.stringify({ title:`Beitrag: ${type} - ${data.name||id}`, head: branch, base: BASE, body:"Automatischer Community-Beitrag ueber den Relay. Bitte pruefen." }) });
+  const prRes = await gh(token, `/repos/${REPO}/pulls`, { method:"POST", body: JSON.stringify({ title:`Beitrag: ${type} - ${data.name||id}`, head: branch, base: BASE, body:"Automatischer Community-Beitrag über den Relay. Bitte prüfen." }) });
   if(!prRes.ok) throw new Error("pr: "+prRes.status);
   return (await prRes.json()).html_url;
 }

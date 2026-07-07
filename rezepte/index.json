@@ -57,15 +57,15 @@
     }
    }
   ],
-  "beschreibung": "Schweinebraten mit knuspriger Kruste. Erst scharf anbraten, dann schonend bei Kombi-Dampf auf 68 Grad Kerntemperatur garen, zum Schluss die Schwarte bei 230 Grad aufknuspern. Tipp: Schwarte vorher rautenfoermig einschneiden."
+  "beschreibung": "Schweinebraten mit knuspriger Kruste. Erst scharf anbraten, dann schonend bei Kombi-Dampf auf 68 °C Kerntemperatur garen, zum Schluss die Schwarte bei 230 °C aufknuspern. Tipp: Schwarte vorher rautenförmig einschneiden."
  },
  {
   "schema": "garprogramm/v1",
   "id": "lib-haehnchen",
   "version": 1,
   "autor": "anonym",
-  "name": "Haehnchenschenkel",
-  "kategorie": "Gefluegel",
+  "name": "Hähnchenschenkel",
+  "kategorie": "Geflügel",
   "vorheizen": true,
   "warmhalten": {
    "aktiv": false,
@@ -103,14 +103,14 @@
     }
    }
   ],
-  "beschreibung": "Saftige Haehnchenschenkel mit knuspriger Haut. Heissluft sorgt fuer gleichmaessige, goldbraune Braeune rundum. Tipp: vorher mit Oel und Paprika einreiben."
+  "beschreibung": "Saftige Hähnchenschenkel mit knuspriger Haut. Heißluft sorgt für gleichmäßige, goldbraune Bräune rundum. Tipp: vorher mit Öl und Paprika einreiben."
  },
  {
   "schema": "garprogramm/v1",
   "id": "lib-gemuese",
   "version": 1,
   "autor": "anonym",
-  "name": "Gemuese daempfen",
+  "name": "Gemüse dämpfen",
   "kategorie": "Beilagen",
   "vorheizen": false,
   "warmhalten": {
@@ -119,7 +119,7 @@
   },
   "phasen": [
    {
-    "name": "Daempfen",
+    "name": "Dämpfen",
     "betriebsart": "daempfen",
     "temperatur_c": 100,
     "feuchte_pct": 100,
@@ -134,14 +134,14 @@
     }
    }
   ],
-  "beschreibung": "Schonendes Daempfen von frischem Gemuese bei 100 Grad. Erhaelt Farbe, Biss und Vitamine, ideal fuer Brokkoli, Karotten oder Bohnen. Tipp: gleich grosse Stuecke schneiden."
+  "beschreibung": "Schonendes Dämpfen von frischem Gemüse bei 100 °C. Erhält Farbe, Biss und Vitamine, ideal für Brokkoli, Karotten oder Bohnen. Tipp: gleich große Stücke schneiden."
  },
  {
   "schema": "garprogramm/v1",
   "id": "lib-broetchen",
   "version": 1,
   "autor": "anonym",
-  "name": "Broetchen aufbacken",
+  "name": "Brötchen aufbacken",
   "kategorie": "Backen",
   "vorheizen": true,
   "warmhalten": {
@@ -165,7 +165,7 @@
     }
    }
   ],
-  "beschreibung": "Aufbackbroetchen in wenigen Minuten knusprig. Ein kurzer Dampfstoss am Anfang macht die Kruste roesch. Tipp: Broetchen vorher kurz mit Wasser bespruehen."
+  "beschreibung": "Aufbackbrötchen in wenigen Minuten knusprig. Ein kurzer Dampfstoß am Anfang macht die Kruste rösch. Tipp: Brötchen vorher kurz mit Wasser besprühen."
  },
  {
   "schema": "garprogramm/v1",
@@ -197,14 +197,14 @@
     }
    }
   ],
-  "beschreibung": "Zart gegartes Lachsfilet bei niedriger Temperatur mit viel Dampf. Bei 52 Grad Kerntemperatur bleibt der Fisch glasig und saftig. Tipp: vorher leicht salzen und mit Zitrone wuerzen."
+  "beschreibung": "Zart gegartes Lachsfilet bei niedriger Temperatur mit viel Dampf. Bei 52 °C Kerntemperatur bleibt der Fisch glasig und saftig. Tipp: vorher leicht salzen und mit Zitrone würzen."
  },
  {
   "schema": "garprogramm/v1",
   "id": "lib-ruehrei",
   "version": 1,
   "autor": "anonym",
-  "name": "Ruehrei",
+  "name": "Rührei",
   "kategorie": "Eierspeisen",
   "vorheizen": false,
   "warmhalten": {
@@ -228,7 +228,7 @@
     }
    }
   ],
-  "beschreibung": "Cremiges Ruehrei aus dem Kombidaempfer, ohne Anbrennen und staendiges Ruehren. Bei 90 Grad mit Dampf stockt die Eimasse gleichmaessig. Tipp: einmal umruehren, wenn sie halb fest ist."
+  "beschreibung": "Cremiges Rührei aus dem Kombidämpfer, ohne Anbrennen und ständiges Rühren. Bei 90 °C mit Dampf stockt die Eimasse gleichmäßig. Tipp: einmal umrühren, wenn sie halb fest ist."
  },
  {
   "schema": "garprogramm/v1",
@@ -273,7 +273,7 @@
     }
    }
   ],
-  "beschreibung": "Niedertemperatur-Rinderbraten, rosa und butterzart. Kurz scharf angebraten, dann langsam auf 56 Grad Kerntemperatur gezogen. Tipp: nach dem Garen 10 Minuten ruhen lassen."
+  "beschreibung": "Niedertemperatur-Rinderbraten, rosa und butterzart. Kurz scharf angebraten, dann langsam auf 56 °C Kerntemperatur gezogen. Tipp: nach dem Garen 10 Minuten ruhen lassen."
  },
  {
   "schema": "garprogramm/v1",
@@ -304,14 +304,14 @@
     }
    }
   ],
-  "beschreibung": "Pizza knusprig aufbacken bei 250 Grad Heissluft. Der Boden wird kross, der Kaese gleichmaessig ueberbacken. Tipp: direkt auf den vorgeheizten Rost oder Pizzastein."
+  "beschreibung": "Pizza knusprig aufbacken bei 250 °C Heißluft. Der Boden wird kross, der Käse gleichmäßig überbacken. Tipp: direkt auf den vorgeheizten Rost oder Pizzastein."
  },
  {
   "schema": "garprogramm/v1",
   "id": "lib-kartoffeln",
   "version": 1,
   "autor": "anonym",
-  "name": "Kartoffeln daempfen",
+  "name": "Kartoffeln dämpfen",
   "kategorie": "Beilagen",
   "vorheizen": false,
   "warmhalten": {
@@ -320,7 +320,7 @@
   },
   "phasen": [
    {
-    "name": "Daempfen",
+    "name": "Dämpfen",
     "betriebsart": "daempfen",
     "temperatur_c": 100,
     "feuchte_pct": 100,
@@ -335,7 +335,7 @@
     }
    }
   ],
-  "beschreibung": "Festkochende Kartoffeln schonend bei 100 Grad daempfen. Sie bleiben locker und zerfallen nicht, ideal als Beilage oder fuer Salat. Tipp: gleich grosse Knollen waehlen."
+  "beschreibung": "Festkochende Kartoffeln schonend bei 100 °C dämpfen. Sie bleiben locker und zerfallen nicht, ideal als Beilage oder für Salat. Tipp: gleich große Knollen wählen."
  },
  {
   "schema": "garprogramm/v1",
@@ -343,7 +343,7 @@
   "version": 1,
   "autor": "anonym",
   "name": "Entenkeule",
-  "kategorie": "Gefluegel",
+  "kategorie": "Geflügel",
   "vorheizen": true,
   "warmhalten": {
    "aktiv": true,
@@ -382,6 +382,6 @@
     }
    }
   ],
-  "beschreibung": "Knusprige Entenkeule mit zartem Fleisch. Kombi-Garen haelt das Fleisch saftig, Heissluft macht die Haut knusprig. Tipp: Haut einstechen, damit Fett austreten kann."
+  "beschreibung": "Knusprige Entenkeule mit zartem Fleisch. Kombi-Garen hält das Fleisch saftig, Heißluft macht die Haut knusprig. Tipp: Haut einstechen, damit Fett austreten kann."
  }
 ]

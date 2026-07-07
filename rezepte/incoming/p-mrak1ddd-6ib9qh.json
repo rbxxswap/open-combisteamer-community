@@ -1,0 +1,38 @@
+{
+  "schema": "garprogramm/v1",
+  "id": "p-mrak1ddd-6ib9qh",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Kartoffeln daempfen",
+  "kategorie": "Beilagen",
+  "vorheizen": false,
+  "warmhalten": {
+    "aktiv": true,
+    "temperatur_c": 65
+  },
+  "phasen": [
+    {
+      "nr": 1,
+      "name": "Daempfen",
+      "betriebsart": "daempfen",
+      "temperatur_c": 100,
+      "feuchte_pct": 100,
+      "luefter": 2,
+      "reversieren": false,
+      "ende": {
+        "typ": "zeit",
+        "zeit_s": 1500
+      },
+      "optionen": {
+        "signalton": true,
+        "entdampfen_modus": "auto",
+        "entdampfen_dauer_s": 0,
+        "zeit_ab_sollwert": true,
+        "beschicken_danach": false
+      }
+    }
+  ],
+  "erstellt": "2026-07-07T11:17:31.249Z",
+  "vorheiz_temp_c": 0,
+  "tuer_offen_heiz_c": 0
+}

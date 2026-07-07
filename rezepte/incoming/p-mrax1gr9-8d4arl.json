@@ -1,0 +1,39 @@
+{
+  "schema": "garprogramm/v1",
+  "id": "p-mrax1gr9-8d4arl",
+  "version": 1,
+  "autor": "anonym",
+  "name": "Lachsfilet",
+  "kategorie": "Fisch",
+  "vorheizen": true,
+  "warmhalten": {
+    "aktiv": false,
+    "temperatur_c": 55
+  },
+  "phasen": [
+    {
+      "nr": 1,
+      "name": "Sanft garen",
+      "betriebsart": "daempfen",
+      "temperatur_c": 80,
+      "feuchte_pct": 90,
+      "luefter": 1,
+      "reversieren": false,
+      "ende": {
+        "typ": "kerntemperatur",
+        "kern_c": 52
+      },
+      "optionen": {
+        "signalton": true,
+        "entdampfen_modus": "auto",
+        "entdampfen_dauer_s": 0,
+        "zeit_ab_sollwert": true,
+        "beschicken_danach": false
+      }
+    }
+  ],
+  "beschreibung": "Zart gegartes Lachsfilet bei niedriger Temperatur mit viel Dampf. Bei 52 Grad Kerntemperatur bleibt der Fisch glasig und saftig. Tipp: vorher leicht salzen und mit Zitrone wuerzen.",
+  "erstellt": "2026-07-07T17:21:30.645Z",
+  "vorheiz_temp_c": 0,
+  "tuer_offen_heiz_c": 0
+}
